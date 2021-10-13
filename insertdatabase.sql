@@ -105,6 +105,26 @@ VALUES
         'SIT'
     );
 
+--usuario seguridad
+
+INSERT INTO
+    mexico.users(
+        username,
+        password,
+        softdeleteflag,
+        lastmodifieddate,
+        vendor_id,
+        environment
+    )
+VALUES
+    (
+        'seguridad@ab.inbev',
+        'V3p6eHJ@zz#s$GW',
+        'false',
+        now(),
+        '28eaf607-3d22-4df4-8ff7-02c8be556979',
+        'UAT'
+    );
 
 --USUARIOS MX006 UAT
 
