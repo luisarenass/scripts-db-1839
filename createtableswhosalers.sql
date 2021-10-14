@@ -1,6 +1,7 @@
 --Script para la creación de las tablas del proyecto I839
 --Creación de Esquema
 CREATE SCHEMA IF NOT EXISTS mexico;
+ALTER DEFAULT PRIVILEGES IN SCHEMA mexico GRANT ALL PRIVILEGES ON TABLES TO wholesalers_bees;
 
 
 CREATE TABLE IF NOT EXISTS mexico.accounts (
@@ -271,5 +272,5 @@ CREATE TABLE IF NOT EXISTS mexico.wholesalers_auth (
 
 --Otorgar permisos
 
-GRANT ALL ON SCHEMA mexico to uan4a2prnag7if;
-GRANT ALL ON ALL TABLES IN SCHEMA public TO uan4a2prnag7if;
+GRANT ALL ON SCHEMA mexico to wholesalers_bees;
+GRANT ALL ON ALL TABLES IN SCHEMA mexico TO wholesalers_bees;
