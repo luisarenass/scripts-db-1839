@@ -2,13 +2,6 @@
 --Creación de Esquema
 CREATE SCHEMA IF NOT EXISTS mexico;
 
---Creación de tablas
-CREATE TABLE IF NOT EXISTS mexico.access_token (
-    id integer NOT NULL DEFAULT nextval('mexico.access_token_id_seq' :: regclass),
-    access_token text COLLATE pg_catalog."default",
-    user_id integer,
-    CONSTRAINT access_token_pkey PRIMARY KEY (id)
-) WITH (OIDS = FALSE) TABLESPACE pg_default;
 
 CREATE TABLE IF NOT EXISTS mexico.accounts (
     id integer NOT NULL GENERATED ALWAYS AS IDENTITY (
@@ -266,7 +259,7 @@ CREATE TABLE IF NOT EXISTS mexico.wholesalers_auth (
         INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1
     ),
     vendor_id character varying(40) COLLATE pg_catalog."default" NOT NULL,
-    environment character varying(3) COLLATE pg_catalog."default" NOT NULL,
+    environment character varying(4) COLLATE pg_catalog."default" NOT NULL,
     url_token character varying(400) COLLATE pg_catalog."default" NOT NULL,
     client_id character varying(100) COLLATE pg_catalog."default" NOT NULL,
     client_secret character varying(100) COLLATE pg_catalog."default" NOT NULL,
